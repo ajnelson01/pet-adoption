@@ -1,0 +1,3 @@
+name: cat-api-blue
+routes:
+  - route: cat-api.apps.internal

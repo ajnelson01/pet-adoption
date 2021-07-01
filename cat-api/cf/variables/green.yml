@@ -1,0 +1,3 @@
+name: cat-api-green
+routes:
+  - route: cat-api.apps.internal

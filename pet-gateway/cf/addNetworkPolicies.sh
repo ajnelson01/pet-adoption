@@ -1,6 +1,4 @@
-function addPolicy(){
-  cf add-network-policy $1 $2 -s development -o vmware-annelson --protocol tcp --port 8080
-}
+source ../../common.sh
 
 function main(){
   addPolicy pet-gateway cat-api
