@@ -1,0 +1,14 @@
+---
+applications:
+  - name: pet-gateway
+    instances: 1
+    memory: 1G
+    buildpacks: [java_buildpack_offline]
+    stack: cflinuxfs3
+    routes:
+      - route: pet-adoption.apps.pcfone.io
+    services:
+      - pet-adoption-service-registry
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: "{ jre: { version: 11.+ }}"
+      PET_UI_URI: "http://pet-ui.apps.internal:8080"

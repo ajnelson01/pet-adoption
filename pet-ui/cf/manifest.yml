@@ -1,0 +1,10 @@
+---
+applications:
+  - name: pet-ui
+    instances: 1
+    memory: 256M
+    pushstate: enabled
+    buildpacks: [staticfile_buildpack]
+    routes:
+      - route: pet-ui.apps.internal
+    stack: cflinuxfs3

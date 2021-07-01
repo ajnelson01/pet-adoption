@@ -1,0 +1,13 @@
+---
+applications:
+  - name: cat-api
+    instances: 1
+    memory: 1G
+    buildpacks: [java_buildpack_offline]
+    stack: cflinuxfs3
+    services:
+      - pet-adoption-service-registry
+    routes:
+      - route: cat-api.apps.internal
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: "{ jre: { version: 11.+ }}"

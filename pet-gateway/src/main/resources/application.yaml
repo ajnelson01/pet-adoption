@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: pet-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: dog-api
+          uri: lb://dog-api
+          predicates:
+            - Path=/api/dogs/**
+        - id: cat-api
+          uri: lb://cat-api
+          predicates:
+            - Path=/api/cats/**
+        - id: adoption-api
+          uri: lb://adoption-api
+          predicates:
+            - Path=/api/adoption/**
+        - id: pet-ui
+          uri: ${PET_UI_URI:http://localhost:3000}
+          predicates:
+            - Path=/**

@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: cat-api
+  cloud:
+    services:
+      registrationMethod: direct
+  datasource:
+    url: jdbc:h2:mem:cat-db;DB_CLOSE_DELAY=-1;
+    username: user
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+server:
+  port: 8081
+
+---
+spring:
+  config:
+    activate:
+      on-cloud-platform: cloud_foundry
+server:
+  port: 8080
