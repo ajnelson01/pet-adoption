@@ -12,6 +12,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
+  sql:
+    init:
+      data-locations: classpath:${DATA_SCRIPT:blue.sql}
 server:
   port: 8081
 

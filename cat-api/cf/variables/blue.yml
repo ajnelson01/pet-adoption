@@ -1,3 +1,4 @@
 name: cat-api-blue
 routes:
   - route: cat-api.apps.internal
+data_script_name: blue.sql

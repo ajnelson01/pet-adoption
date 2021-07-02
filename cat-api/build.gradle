@@ -21,7 +21,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry:3.2.1.RELEASE'
-//	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.3'
 
 	implementation 'org.projectlombok:lombok:1.18.18'
 	implementation 'org.flywaydb:flyway-core'
